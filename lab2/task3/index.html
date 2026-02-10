@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Pricing Layout</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="pricing-page">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Try the Copilot-powered platform</h1>
+        <p>
+          We get it, there's a lot you can do with GitHub. That's why we've
+          packed all of it into a single risk-free trial that includes GitHub
+          Enterprise, Copilot, and Advanced Security.
+        </p>
+        <button class="button button-dark hero-cta" type="button">
+          Start free for 30 days
+        </button>
+      </section>
+
+      <section class="pricing-grid" aria-label="Pricing tiers">
+        <article class="tier-card">
+          <header class="tier-main">
+            <h2>Free</h2>
+            <p class="tier-subtitle">
+              The basics for individuals and organizations
+            </p>
+
+            <p class="tier-price">
+              <span class="currency">$</span>
+              <span class="amount">0</span>
+              <span class="usd">USD</span>
+              <span class="price-note">per user/month</span>
+            </p>
+
+            <button class="button button-light button-full" type="button">
+              Create a free organization
+            </button>
+          </header>
+
+          <div class="tier-features">
+            <ul>
+              <li>Unlimited public/private repositories</li>
+              <li>Dependabot security and version updates</li>
+              <li>
+                2,000 CI/CD minutes/month
+                <span class="feature-note">Free for public repositories</span>
+              </li>
+              <li>
+                500MB of Packages storage
+                <span class="feature-note">Free for public repositories</span>
+              </li>
+              <li>Issues &amp; Projects</li>
+              <li>Community support</li>
+            </ul>
+
+            <p class="feature-group-title">Featured add-ons</p>
+            <ul>
+              <li>GitHub Copilot Access</li>
+              <li>GitHub Codespaces Access</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tier-card">
+          <header class="tier-main">
+            <h2>Team</h2>
+            <p class="tier-subtitle">
+              Advanced collaboration for individuals and organizations
+            </p>
+
+            <p class="tier-price">
+              <span class="currency">$</span>
+              <span class="amount">4</span>
+              <span class="usd">USD</span>
+              <span class="price-note">per user/month</span>
+            </p>
+
+            <button class="button button-dark button-full" type="button">
+              Continue with Team
+            </button>
+          </header>
+
+          <div class="tier-features">
+            <ul>
+              <li>Everything included in Free, plus...</li>
+              <li>Access to GitHub Codespaces</li>
+              <li>Repository rules</li>
+              <li>Multiple reviewers in pull requests</li>
+              <li>Draft pull requests</li>
+              <li>Code owners</li>
+              <li>Required reviewers</li>
+              <li>Pages and Wikis</li>
+              <li>Environment deployment branches and secrets</li>
+              <li>
+                3,000 CI/CD minutes/month
+                <span class="feature-note">Free for public repositories</span>
+              </li>
+              <li>
+                2GB of Packages storage
+                <span class="feature-note">Free for public repositories</span>
+              </li>
+              <li>Web-based support</li>
+            </ul>
+
+            <p class="feature-group-title">Featured add-ons</p>
+            <ul>
+              <li>GitHub Secret Protection</li>
+              <li>GitHub Code Security</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tier-card tier-card-recommended">
+          <p class="recommended-badge">RECOMMENDED</p>
+          <div class="tier-recommended-body">
+            <header class="tier-main">
+              <h2>Enterprise</h2>
+              <p class="tier-subtitle">
+                Security, compliance, and flexible deployment
+              </p>
+              <p class="starting-at">Starting at</p>
+
+              <p class="tier-price">
+                <span class="currency">$</span>
+                <span class="amount">21</span>
+                <span class="usd">USD</span>
+                <span class="price-note">per user/month</span>
+              </p>
+
+              <div class="button-row">
+                <button class="button button-dark" type="button">
+                  Start a free trial
+                </button>
+                <button class="button button-light" type="button">
+                  Contact Sales
+                </button>
+              </div>
+            </header>
+
+            <div class="tier-features">
+              <ul>
+                <li>Everything included in Team, plus...</li>
+                <li>Data residency</li>
+                <li>Enterprise Managed Users</li>
+                <li>User provisioning through SCIM</li>
+                <li>
+                  Enterprise Account to centrally manage multiple organizations
+                </li>
+                <li>Environment protection rules</li>
+                <li>Repository rules</li>
+                <li>Audit Log API</li>
+                <li>SOC1, SOC2, type 2 reports annually</li>
+                <li>FedRAMP Tailored Authority to Operate (ATO)</li>
+                <li>SAML single sign-on</li>
+                <li>Advanced auditing</li>
+                <li>GitHub Connect</li>
+                <li>
+                  50,000 CI/CD minutes/month
+                  <span class="feature-note">Free for public repositories</span>
+                </li>
+                <li>
+                  50GB of Packages storage
+                  <span class="feature-note">Free for public repositories</span>
+                </li>
+              </ul>
+
+              <p class="feature-group-title">Exclusive add-on</p>
+              <ul>
+                <li>Premium support</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="addons-section" aria-labelledby="addons-title">
+        <h2 id="addons-title">Additional add-ons</h2>
+
+        <div class="addons-grid">
+          <article class="addon-card">
+            <div class="addon-top-row">
+              <span class="addon-icon icon-purple">CP</span>
+            </div>
+            <h3>GitHub Copilot</h3>
+            <p>
+              Get started for free with up to 2,000 completions and 50 chat
+              requests per month.
+            </p>
+            <a href="#" class="addon-link">Compare plans &gt;</a>
+          </article>
+
+          <article class="addon-card">
+            <div class="addon-top-row">
+              <span class="addon-icon icon-green">GM</span>
+              <span class="new-badge">New</span>
+            </div>
+            <h3>GitHub Models</h3>
+            <p>
+              Bring industry-leading AI into your workflow, securely, scalably,
+              and with full developer control.
+            </p>
+            <a href="#" class="addon-link">Learn more &gt;</a>
+          </article>
+
+          <article class="addon-card">
+            <div class="addon-top-row">
+              <span class="addon-icon icon-blue">AS</span>
+            </div>
+            <h3>GitHub Advanced Security</h3>
+            <p>
+              Gain peace of mind with our security, privacy, and responsible AI
+              policies.
+            </p>
+            <a href="#" class="addon-link">Learn more &gt;</a>
+          </article>
+
+          <article class="addon-card">
+            <div class="addon-top-row">
+              <span class="addon-icon icon-pink">CS</span>
+            </div>
+            <h3>GitHub Codespaces</h3>
+            <p>
+              Starting at $0.18 per hour of compute and $0.07 per GB of storage.
+            </p>
+            <a href="#" class="addon-link">Learn more &gt;</a>
+          </article>
+
+          <article class="addon-card">
+            <div class="addon-top-row">
+              <span class="addon-icon icon-orange">PS</span>
+            </div>
+            <h3>Premium support</h3>
+            <p>
+              Get expert help for Enterprise Cloud and Enterprise any hour your
+              team needs it.
+            </p>
+            <a href="#" class="addon-link">Learn more &gt;</a>
+          </article>
+
+          <article class="addon-card">
+            <div class="addon-top-row">
+              <span class="addon-icon icon-gold">LFS</span>
+            </div>
+            <h3>Git Large File Storage</h3>
+            <p>$5 per month for 50 GB bandwidth and 50 GB of storage.</p>
+            <a href="#" class="addon-link">Learn more &gt;</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

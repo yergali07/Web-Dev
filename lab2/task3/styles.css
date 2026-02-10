@@ -1,0 +1,369 @@
+:root {
+  --bg: #f6f8fa;
+  --text: #1f2328;
+  --muted: #57606a;
+  --line: #d0d7de;
+  --blue: #0969da;
+  --blue-strong: #1f6feb;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.pricing-page {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 96px 24px 120px;
+}
+
+.hero {
+  max-width: 980px;
+  margin: 0 auto 88px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  margin: 0 auto 34px;
+  max-width: 900px;
+  color: var(--muted);
+  font-size: 2rem;
+  font-size: clamp(1.12rem, 2.1vw, 2rem);
+}
+
+.button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 2rem;
+  font-size: clamp(1rem, 1.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.hero-cta {
+  min-width: 300px;
+  padding: 16px 30px;
+}
+
+.button-dark {
+  color: #ffffff;
+  background: linear-gradient(180deg, #3b424a 0%, #21262d 100%);
+}
+
+.button-light {
+  color: var(--text);
+  border-color: #d0d7de;
+  background: #f6f8fa;
+}
+
+.button-full {
+  width: 100%;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.tier-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.tier-main {
+  padding: 26px 24px 18px;
+  text-align: center;
+}
+
+.tier-main h2 {
+  margin: 0;
+  font-size: 2.75rem;
+  font-size: clamp(1.9rem, 2.7vw, 2.75rem);
+  line-height: 1.15;
+}
+
+.tier-subtitle {
+  min-height: 66px;
+  margin: 8px 0 26px;
+  color: var(--muted);
+  font-size: 1.9rem;
+  font-size: clamp(1rem, 1.3vw, 1.9rem);
+  line-height: 1.25;
+}
+
+.starting-at {
+  width: fit-content;
+  margin: -4px auto 14px;
+  border: 1px solid #c9d1d9;
+  border-radius: 999px;
+  padding: 4px 18px;
+  color: var(--muted);
+  font-size: 1.7rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.7rem);
+}
+
+.tier-price {
+  margin: 0 0 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+
+.currency {
+  color: var(--muted);
+  font-size: 2rem;
+  font-size: clamp(1.2rem, 1.6vw, 2rem);
+}
+
+.amount {
+  font-size: 4.3rem;
+  font-size: clamp(2.3rem, 4.7vw, 4.3rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.usd {
+  font-size: 2.3rem;
+  font-size: clamp(1.3rem, 2.1vw, 2.3rem);
+  font-weight: 700;
+}
+
+.price-note {
+  color: var(--muted);
+  font-size: 1.9rem;
+  font-size: clamp(1rem, 1.3vw, 1.9rem);
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tier-features {
+  border-top: 1px solid #e8ebee;
+  padding: 22px 20px 26px;
+  background: #f6f8fa;
+}
+
+.tier-features ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tier-features li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 24px;
+  color: #4b5563;
+  font-size: 1.7rem;
+  font-size: clamp(0.98rem, 1.15vw, 1.7rem);
+  font-weight: 600;
+}
+
+.tier-features li::before {
+  content: ">";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  color: #656d76;
+}
+
+.feature-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 1.45rem;
+  font-size: clamp(0.84rem, 1vw, 1.45rem);
+  font-weight: 500;
+}
+
+.feature-group-title {
+  margin: 18px 0 12px;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.7rem);
+}
+
+.tier-card-recommended {
+  border: 4px solid var(--blue-strong);
+}
+
+.recommended-badge {
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, #1f6feb 0%, #218bff 100%);
+}
+
+.tier-recommended-body {
+  background: #ffffff;
+}
+
+.addons-section {
+  margin-top: 110px;
+}
+
+.addons-section h2 {
+  margin: 0 0 38px;
+  text-align: center;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.addon-card {
+  min-height: 300px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px 30px 28px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.addon-top-row {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addon-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.icon-purple {
+  background: #f4e8ff;
+  color: #7c3aed;
+}
+
+.icon-green {
+  background: #dafbe1;
+  color: #1a7f37;
+}
+
+.icon-blue {
+  background: #ddf4ff;
+  color: #0969da;
+}
+
+.icon-pink {
+  background: #ffeff7;
+  color: #bf3989;
+}
+
+.icon-orange {
+  background: #fff1e5;
+  color: #bc4c00;
+}
+
+.icon-gold {
+  background: #fff8c5;
+  color: #9a6700;
+}
+
+.new-badge {
+  border: 1px solid #1a7f37;
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: #1a7f37;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.addon-card h3 {
+  margin: 0 0 14px;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+  line-height: 1.2;
+}
+
+.addon-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.2vw, 1.9rem);
+}
+
+.addon-link {
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: clamp(1rem, 1.2vw, 1.8rem);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .pricing-page {
+    padding: 72px 16px 80px;
+  }
+
+  .hero {
+    margin-bottom: 64px;
+  }
+
+  .hero-cta {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .pricing-grid,
+  .addons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    grid-template-columns: 1fr;
+  }
+
+  .tier-subtitle {
+    min-height: 0;
+  }
+
+  .addon-card {
+    min-height: 0;
+  }
+}
