@@ -1,0 +1,15 @@
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" routerLink="/products">Online Store</a>
+
+    <nav>
+      <a routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Products
+      </a>
+    </nav>
+  </header>
+
+  <main class="content-area">
+    <router-outlet />
+  </main>
+</div>

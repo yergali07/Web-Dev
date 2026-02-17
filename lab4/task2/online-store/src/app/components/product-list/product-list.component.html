@@ -1,0 +1,15 @@
+<section class="catalog">
+  <header class="catalog-header">
+    <h1>Online Store Catalog</h1>
+    <p>
+      Real kaspi.kz products with direct links, sharing options, ratings, and image galleries.
+    </p>
+  </header>
+
+  <div class="grid">
+    <app-product-card
+      *ngFor="let product of products; trackBy: trackByProductId"
+      [product]="product"
+    />
+  </div>
+</section>

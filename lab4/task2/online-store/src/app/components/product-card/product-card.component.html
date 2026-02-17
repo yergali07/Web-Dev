@@ -1,0 +1,48 @@
+<article class="card">
+  <app-product-gallery [images]="product.images" [productName]="product.name" />
+
+  <div class="content">
+    <div class="text-block">
+      <h3 class="name">{{ product.name }}</h3>
+      <p class="description">{{ product.description }}</p>
+    </div>
+
+    <div class="card-footer">
+      <div class="meta-row">
+        <p class="price">{{ formatPrice(product.price) }} KZT</p>
+        <div class="rating" [attr.aria-label]="'Rating ' + product.rating + ' out of 5'">
+          <span class="star" *ngFor="let star of starSlots" [class.filled]="star <= roundedRating">★</span>
+          <span class="rating-number">{{ product.rating }}</span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <a class="kaspi-link" [href]="product.link" target="_blank" rel="noopener noreferrer">
+          <img
+            class="kaspi-logo"
+            src="https://companieslogo.com/img/orig/KKS.F-9d710a31.png"
+            alt="Kaspi logo"
+            loading="lazy"
+          />
+          <span>Open on Kaspi.kz</span>
+        </a>
+
+        <div class="share-group">
+          <button type="button" class="share-button" (click)="toggleShareOptions()">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15 8a3 3 0 1 0-2.83-4H12a3 3 0 0 0 .17 1l-4.83 2.9a3 3 0 1 0 0 8.2l4.83 2.9A3 3 0 1 0 13 17a2.98 2.98 0 0 0-.83.12l-4.83-2.9a3.04 3.04 0 0 0 0-4.44l4.83-2.9c.27.08.55.12.83.12a3 3 0 0 0 3-3Z"
+              />
+            </svg>
+            <span>Share</span>
+          </button>
+
+          <div class="share-options" *ngIf="showShareOptions">
+            <button type="button" (click)="shareToWhatsApp()">WhatsApp</button>
+            <button type="button" (click)="shareToTelegram()">Telegram</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

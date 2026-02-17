@@ -1,0 +1,42 @@
+<div class="gallery" *ngIf="images.length; else noImageTemplate">
+  <div class="main-image-wrap">
+    <img class="main-image" [src]="selectedImage" [alt]="productName" loading="lazy" />
+
+    <button
+      type="button"
+      class="nav-button left"
+      *ngIf="images.length > 1"
+      (click)="previousImage()"
+      aria-label="Previous image"
+    >
+      &lt;
+    </button>
+
+    <button
+      type="button"
+      class="nav-button right"
+      *ngIf="images.length > 1"
+      (click)="nextImage()"
+      aria-label="Next image"
+    >
+      &gt;
+    </button>
+  </div>
+
+  <div class="thumb-list" *ngIf="images.length > 1">
+    <button
+      type="button"
+      class="thumb-button"
+      *ngFor="let image of images; let i = index"
+      [class.active]="i === selectedIndex"
+      (click)="selectImage(i)"
+      [attr.aria-label]="'Show image ' + (i + 1)"
+    >
+      <img [src]="image" [alt]="productName + ' thumbnail ' + (i + 1)" loading="lazy" />
+    </button>
+  </div>
+</div>
+
+<ng-template #noImageTemplate>
+  <div class="no-image">No image available</div>
+</ng-template>

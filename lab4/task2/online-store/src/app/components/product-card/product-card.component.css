@@ -1,0 +1,170 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e7e8ee;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(24, 39, 75, 0.08);
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 0.85rem;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: #12131a;
+}
+
+.description {
+  margin: 0;
+  color: #4e5162;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.price {
+  margin: 0;
+  font-weight: 700;
+  color: #12131a;
+  font-size: 1.05rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: #c0c6d5;
+}
+
+.star {
+  font-size: 0.95rem;
+}
+
+.star.filled {
+  color: #f6a400;
+}
+
+.rating-number {
+  margin-left: 0.35rem;
+  font-weight: 600;
+  color: #242838;
+  font-size: 0.88rem;
+}
+
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.kaspi-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  background: #fff;
+  color: #ea1e2f;
+  border: 1px solid #ea1e2f;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.kaspi-link:hover {
+  background: #fff3f4;
+  color: #cf1524;
+  border-color: #cf1524;
+}
+
+.kaspi-logo {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.share-group {
+  position: relative;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid #c2c8d8;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.share-button svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  color: #5a6175;
+}
+
+.share-options {
+  position: absolute;
+  right: 0;
+  margin-top: 0.35rem;
+  background: #fff;
+  border: 1px solid #dde2ef;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(16, 24, 40, 0.12);
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  min-width: 120px;
+}
+
+.share-options button {
+  border: 0;
+  background: #fff;
+  text-align: left;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+
+.share-options button:hover {
+  background: #fff3f4;
+}
+
+@media (max-width: 420px) {
+  .action-row {
+    flex-wrap: wrap;
+  }
+}

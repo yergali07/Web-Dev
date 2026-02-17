@@ -1,0 +1,35 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.catalog-header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  color: #131722;
+}
+
+.catalog-header p {
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  color: #565d70;
+  max-width: 70ch;
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .catalog-header h1 {
+    font-size: 1.55rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
