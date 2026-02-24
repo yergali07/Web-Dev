@@ -1,0 +1,16 @@
+<section class="catalog">
+  <header class="catalog-header">
+    <h2>{{ categoryName }}</h2>
+    <p>{{ displayedProducts.length }} products</p>
+  </header>
+
+  <p class="empty" *ngIf="displayedProducts.length === 0">No products in this category.</p>
+
+  <div class="grid" *ngIf="displayedProducts.length > 0">
+    <app-product-item
+      *ngFor="let product of displayedProducts; trackBy: trackByProductId"
+      [product]="product"
+      (delete)="onDeleteProduct($event)"
+    />
+  </div>
+</section>

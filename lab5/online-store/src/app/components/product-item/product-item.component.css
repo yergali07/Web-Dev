@@ -1,0 +1,306 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e6e9f2;
+  border-radius: 14px;
+  overflow: visible;
+  box-shadow: 0 10px 24px rgba(20, 28, 52, 0.08);
+  height: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem 0.75rem 0;
+}
+
+.main-image-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+}
+
+.main-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.nav-button.left {
+  left: 8px;
+}
+
+.nav-button.right {
+  right: 8px;
+}
+
+.thumb-list {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 48px;
+}
+
+.thumb-list.is-placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.thumb-button {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0;
+  width: 62px;
+  height: 48px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+}
+
+.thumb-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+.thumb-button.active {
+  border-color: #ea1e2f;
+}
+
+.no-image {
+  background: #f2f4f8;
+  border-radius: 12px;
+  min-height: 220px;
+  margin: 0.75rem 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6f6f74;
+  font-size: 0.95rem;
+}
+
+.content {
+  padding: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.name {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: #121826;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #505970;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  margin: 0;
+  font-weight: 700;
+  color: #101828;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: #c1c8d8;
+}
+
+.star {
+  font-size: 0.9rem;
+}
+
+.star.filled {
+  color: #f59e0b;
+}
+
+.rating-number {
+  margin-left: 0.3rem;
+  font-size: 0.85rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.likes-row {
+  font-weight: 600;
+  color: #c81e1e;
+}
+
+.action-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.3rem;
+}
+
+.action-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.action-row-secondary {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+.action-btn {
+  border: 1px solid #cfd6e6;
+  border-radius: 8px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  height: 44px;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1;
+  width: 100%;
+}
+
+.btn-icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
+.like-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.like-btn {
+  color: #0f766e;
+  border-color: #97d3cc;
+}
+
+.delete-btn {
+  color: #c81e1e;
+  border-color: #f3b5b5;
+}
+
+.share-btn {
+  color: #334155;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.share-button svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  color: #5a6175;
+}
+
+.share-group {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+}
+
+.share-options {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #dde3f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(18, 24, 38, 0.15);
+  z-index: 3;
+}
+
+.share-options button {
+  border: 0;
+  background: #fff;
+  text-align: left;
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+}
+
+.share-options button:hover {
+  background: #f6f8fc;
+}
+
+.kaspi-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0;
+  color: #e11d48;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid #fbcad5;
+  border-radius: 8px;
+  height: 44px;
+  padding: 0.4rem 0.6rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.kaspi-link span {
+  white-space: nowrap;
+}
+
+.kaspi-logo {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
