@@ -1,0 +1,21 @@
+<div class="app-shell">
+  <header class="topbar">
+    <h1 class="brand">Lab 6 Albums</h1>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a
+        routerLink="/home"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </a>
+      <a routerLink="/about" routerLinkActive="active-link">About</a>
+      <a routerLink="/albums" routerLinkActive="active-link">Albums</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

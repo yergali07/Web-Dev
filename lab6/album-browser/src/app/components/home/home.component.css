@@ -1,0 +1,31 @@
+.home-card {
+  background: #fff;
+  border: 1px solid #dfe8f6;
+  border-radius: 14px;
+  padding: 1.3rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.home-card h2 {
+  margin: 0;
+  color: #152746;
+}
+
+.home-card p {
+  margin: 0.7rem 0 1.1rem;
+  color: #415166;
+  line-height: 1.5;
+}
+
+.browse-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  background: #0f4c81;
+  border: 1px solid #0f4c81;
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+}

@@ -1,0 +1,27 @@
+<section class="albums-card">
+  <header class="albums-header">
+    <h2>Albums</h2>
+    <button type="button" class="reload-button" (click)="loadAlbums()" [disabled]="isLoading">
+      Reload
+    </button>
+  </header>
+
+  <p class="status" *ngIf="isLoading">Loading albums...</p>
+  <p class="status error" *ngIf="!isLoading && errorMessage">{{ errorMessage }}</p>
+  <p class="status" *ngIf="!isLoading && !errorMessage && albums.length === 0">
+    No albums available.
+  </p>
+
+  <ul class="album-list" *ngIf="!isLoading && !errorMessage && albums.length > 0">
+    <li class="album-item" *ngFor="let album of albums; trackBy: trackByAlbumId">
+      <a class="album-link" [routerLink]="['/albums', album.id]">
+        <span class="album-id">#{{ album.id }}</span>
+        <span class="album-title">{{ album.title }}</span>
+      </a>
+
+      <button type="button" class="delete-button" (click)="deleteAlbum(album.id, $event)">
+        Delete
+      </button>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,44 @@
+<section class="detail-card">
+  <h2>Album Details</h2>
+
+  <p class="status" *ngIf="isLoading">Loading album...</p>
+  <p class="status error" *ngIf="!isLoading && errorMessage">{{ errorMessage }}</p>
+
+  <ng-container *ngIf="!isLoading && album as currentAlbum">
+    <dl class="detail-grid">
+      <div>
+        <dt>ID</dt>
+        <dd>{{ currentAlbum.id }}</dd>
+      </div>
+      <div>
+        <dt>User ID</dt>
+        <dd>{{ currentAlbum.userId }}</dd>
+      </div>
+      <div>
+        <dt>Current Title</dt>
+        <dd>{{ currentAlbum.title }}</dd>
+      </div>
+    </dl>
+
+    <label class="title-label" for="album-title">Edit Title</label>
+    <input
+      id="album-title"
+      type="text"
+      [(ngModel)]="editedTitle"
+      [disabled]="isSaving"
+      placeholder="Enter album title"
+    />
+
+    <div class="actions">
+      <button type="button" class="save-button" (click)="saveAlbum()" [disabled]="isSaving">
+        {{ isSaving ? 'Saving...' : 'Save' }}
+      </button>
+
+      <a class="photos-link" [routerLink]="['/albums', currentAlbum.id, 'photos']">View Photos</a>
+
+      <button type="button" class="back-button" (click)="backToAlbums()">Back</button>
+    </div>
+
+    <p class="status success" *ngIf="saveMessage">{{ saveMessage }}</p>
+  </ng-container>
+</section>

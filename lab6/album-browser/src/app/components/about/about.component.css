@@ -1,0 +1,39 @@
+.about-card {
+  background: #fff;
+  border: 1px solid #dfe8f6;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.about-card h2 {
+  margin-top: 0;
+  color: #152746;
+}
+
+.about-card p {
+  color: #46576f;
+  line-height: 1.5;
+}
+
+.about-card dl {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.about-card div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.6rem;
+}
+
+.about-card dt {
+  font-weight: 700;
+  color: #1f3558;
+}
+
+.about-card dd {
+  margin: 0;
+  color: #42536b;
+}

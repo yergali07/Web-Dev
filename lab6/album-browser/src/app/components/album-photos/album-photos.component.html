@@ -1,0 +1,17 @@
+<section class="photos-card">
+  <header class="photos-header">
+    <h2>Album {{ albumId }} Photos</h2>
+    <a class="back-link" [routerLink]="albumId ? ['/albums', albumId] : ['/albums']">Back</a>
+  </header>
+
+  <p class="status" *ngIf="isLoading">Loading photos...</p>
+  <p class="status error" *ngIf="!isLoading && errorMessage">{{ errorMessage }}</p>
+  <p class="status" *ngIf="!isLoading && !errorMessage && photos.length === 0">No photos found.</p>
+
+  <div class="photos-grid" *ngIf="!isLoading && !errorMessage && photos.length > 0">
+    <figure class="photo-card" *ngFor="let photo of photos; trackBy: trackByPhotoId">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title" loading="lazy" />
+      <figcaption [title]="photo.title">{{ photo.title }}</figcaption>
+    </figure>
+  </div>
+</section>

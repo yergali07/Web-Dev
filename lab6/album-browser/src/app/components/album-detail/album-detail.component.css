@@ -1,0 +1,98 @@
+.detail-card {
+  background: #fff;
+  border: 1px solid #dfe8f6;
+  border-radius: 14px;
+  padding: 1.1rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.detail-card h2 {
+  margin: 0 0 0.85rem;
+  color: #152746;
+}
+
+.detail-grid {
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.detail-grid div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.6rem;
+}
+
+.detail-grid dt {
+  font-weight: 700;
+  color: #1f3558;
+}
+
+.detail-grid dd {
+  margin: 0;
+  color: #3e4f67;
+}
+
+.title-label {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  color: #1f3558;
+  font-weight: 600;
+}
+
+input[type='text'] {
+  width: 100%;
+  border: 1px solid #c8d7ed;
+  border-radius: 10px;
+  padding: 0.55rem 0.65rem;
+  color: #21344f;
+}
+
+.actions {
+  margin-top: 0.95rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.save-button,
+.back-button,
+.photos-link {
+  border: 1px solid #c9d7ec;
+  border-radius: 10px;
+  background: #f5f9ff;
+  color: #1c3358;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.save-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.photos-link {
+  background: #effbf4;
+  border-color: #c9e8d6;
+  color: #18633a;
+}
+
+.back-button {
+  background: #fff;
+}
+
+.status {
+  margin-top: 0.8rem;
+  color: #41566f;
+}
+
+.status.error {
+  color: #b42318;
+}
+
+.status.success {
+  color: #18633a;
+}
